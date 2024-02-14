@@ -45,7 +45,7 @@ def visualization(data,target):
 
             st.write("Scatter Plot")
             fig, ax = plt.subplots(figsize=(8, 6))
-            sns.scatterplot(df=df, x=feature, y=target, ax=ax)
+            sns.scatterplot(data=df, x=feature, y=target, ax=ax)
             ax.set_xlabel(feature)
             ax.set_ylabel(target)
             ax.set_title("Scatter Plot of " + feature + " vs " + target)
@@ -53,7 +53,7 @@ def visualization(data,target):
 
             st.write("Line Plot")
             fig, ax = plt.subplots(figsize=(8, 6))
-            sns.lineplot(df=df, x=feature, y=target, ax=ax)
+            sns.lineplot(data=df, x=feature, y=target, ax=ax)
             ax.set_xlabel(feature)
             ax.set_ylabel(target)
             ax.set_title("Line Plot of " + feature + " vs " + target)
@@ -61,8 +61,8 @@ def visualization(data,target):
 
             st.write("Area Plot")
             fig, ax = plt.subplots(figsize=(8, 6))
-            sns.lineplot(df=df, x=feature, y=target, ax=ax, ci=None)
-            sns.lineplot(df=df, x=feature, y=target, ax=ax, ci='sd')
+            sns.lineplot(data=df, x=feature, y=target, ax=ax, ci=None)
+            sns.lineplot(data=df, x=feature, y=target, ax=ax, ci='sd')
             ax.set_xlabel(feature)
             ax.set_ylabel(target)
             ax.set_title("Area Plot of " + feature + " vs " + target)
